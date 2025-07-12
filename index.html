@@ -1,21 +1,59 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portofolio Saya</title>
   <style>
-    body { font-family: sans-serif; text-align: center; padding: 20px; }
-    iframe { width: 100%; height: 90vh; border: none; }
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      background: #f9f9f9;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    iframe {
+      width: 100%;
+      height: 480px;
+      border: 1px solid #ccc;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+    }
+    p {
+      text-align: justify;
+    }
   </style>
 </head>
 <body>
-  <h1>Portofolio Saya</h1>
-  <p>Berikut adalah dokumen PDF mengenai 2 project kecil yang saya buat</p>
-  <p>1. Saya membuat data dummy yang berisi tabel mengenai data pelanggan Indosat</p>
-  <p>2. Dari data tersebut, saya melakukan perhitungan churn rate customer dengan visualisasi pie chart, yang bisa di-preview dibawah:</p>
-  <iframe src="churn_rate.pdf"></iframe>
-  <p>3. Cukup kompleks, saya membuat model Clustering sebagai penerapan skill Machine Learning dengan membagi data pelanggan menjadi tiga cluster dengan keunikan masing-masing</p>
-  <iframe src="Clustering.pdf"></iframe>
+  <div class="container">
+    <h1>Portofolio Saya</h1>
+
+    <p>Berikut adalah dokumen PDF mengenai dua project kecil yang saya buat sebagai latihan keterampilan di bidang data:</p>
+
+    <p><strong>Catatan:</strong> Jika link dibuka lewat HP, kemungkinan file PDF akan terunduh terlebih dahulu sebelum bisa dilihat. Namun jika dibuka lewat komputer/laptop, file PDF kemungkinan langsung bisa dipreview tanpa perlu di-download.</p>
+
+    <p><strong>1.</strong> Saya membuat data dummy berupa tabel yang merepresentasikan data pelanggan Indosat.</p>
+
+    <p><strong>2.</strong> Dari data tersebut, saya menghitung <em>churn rate</em> (tingkat kehilangan pelanggan) dan menampilkannya dalam bentuk visualisasi pie chart, seperti berikut:</p>
+
+    <iframe src="churn_rate.pdf"></iframe>
+
+    <p><strong>3.</strong> Untuk level lebih lanjut, saya membangun model <em>clustering</em> (pengelompokan) menggunakan metode machine learning untuk membagi pelanggan ke dalam tiga kelompok unik berdasarkan karakteristiknya.</p>
+
+    <iframe src="Clustering.pdf"></iframe>
+  </div>
 </body>
 </html>
-
