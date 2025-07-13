@@ -1,0 +1,13 @@
+# Folder backup atau editor
+*.bak
+*.swp
+.DS_Store
+Thumbs.db
+
+# VS Code config
+.vscode/
+
+# Output dari Jupyter/streamlit/IDE
+__pycache__/
+.ipynb_checkpoints/
+*.pyc

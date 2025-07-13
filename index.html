@@ -1,29 +1,64 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Saya</title>
+  <title>mini Project Indosat</title>
   <style>
+    @font-face {
+      font-family: 'Ooredoo Heavy';
+      src: url('Ooredoo-Heavy.ttf') format('truetype');
+      font-weight: 400;
+      /* Set normal weight */
+      font-style: normal;
+    }
+
     body {
-      font-family: sans-serif;
+      font-family: 'Ooredoo Heavy', sans-serif;
+      font-weight: 400;
+      /* Set normal weight */
       margin: 0;
       padding: 20px;
       line-height: 1.6;
-      background: #f9f9f9;
+      background: #FFD500;
     }
+
     .container {
       max-width: 800px;
       margin: auto;
       background: #fff;
       padding: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
     }
+    
+    .cv {
+      font-size:larger;
+      max-width: 150px;
+      background: #fff;
+      padding: 5px;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align:center;
+      margin: 10px auto 0 auto;
+      transform:translate(340px, 0)
+    }
+
     h1 {
       text-align: center;
       margin-bottom: 1rem;
+      color: #ed1c24;
     }
+    
+    ul, ol {
+      font-weight: normal;
+      font-family: 'UbuntuSans Medium', sans-serif;
+    }
+    ul li, ol li {
+      font-weight: normal;
+    }
+
     iframe {
       width: 100%;
       height: 480px;
@@ -32,30 +67,187 @@
       margin-bottom: 2rem;
       border-radius: 4px;
     }
+
+    @font-face {
+      font-family: 'UbuntuSans Medium';
+      src: url('UbuntuSans-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
     p {
       text-align: justify;
+      font-family: 'UbuntuSans Medium', sans-serif;
+    }
+
+    .dataset {
+      width: 100%;
+    }
+
+    .banner {
+      width: 80%;
+      margin: 0 auto 24px auto;
+      background: radial-gradient(circle,rgba(253, 29, 29, 1) 0%, rgba(253, 29, 29, 1) 6%, rgba(255, 48, 217, 1) 100%);
+      padding: 32px 0 24px 0;
+      border-radius: 0 0 16px 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      text-align: center;
+    }
+
+    .banner h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 2.2rem;
+      font-family: 'Ooredoo Heavy', sans-serif;
+      font-weight: 400;
+      letter-spacing: 1px;
+    }
+
+    code {
+      font-size :larger;
+    }
+    
+    a {
+      text-decoration: none;
+      color: #FF007F;
+    }
+
+    footer {
+      max-width: 850px;
+      width: 100%;
+      margin: 20px auto 24px auto;
+      background: radial-gradient(circle,rgba(253, 29, 29, 1) 0%, rgba(253, 29, 29, 1) 6%, rgba(191, 0, 156, 1) 100%);
+      padding: 32px 0 24px 0;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+    
+    footer p {
+      text-align: center;
+      max-width:fit-content;
+      background:white;
+      color:black;
+      border-radius:20px;
+      padding:3px;
+      margin:auto;
+      font-family: 'Ooredoo Heavy', sans-serif;
+      font-size:smaller;
+    }
+
+    /* Responsive styles */
+    @media (max-width: 900px) {
+      .banner {
+        width: 80%;
+        padding: 24px 0 16px 0;
+      }
+      
+      .diagram {
+        width: 80%;
+      }
+
+      footer {
+        width: 100%;
+      }
+
+      .cv {
+        transform:none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .banner {
+        width: 100%;
+      }
+      
+      body {
+        padding: 8px;
+      }
+
+      iframe {
+        height: 220px;
+      }
+      
+      .diagram {
+        width: 80%;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div class="banner">
+    <h1>Indosat mini Project</h1>
+  </div>
+  <div></div>
   <div class="container">
-    <h1>Portofolio Saya</h1>
+    <h2>Tujuan Project:</h2>
+    <p>Mini project ini bertujuan untuk mengolah dataset pelanggan Indosat guna menghasilkan <i>insight</i> yang bermanfaat bagi kebutuhan bisnis</p>
+    <p>Berikut 2 hal yang akan saya kerjakan:</p>
+    <ol>
+      <li>Menghitung Churn Rate</li>
+      <li>Penerapan Machine Learning untuk mengetahui informasi baru pada dataset</li>
+    </ol>
+    <h3>Note:</h3>
+    <ul>
+      <li>Berkas yang saya gunakan merupakan hasil generate sendiri alias fake data, dibuat menggunakan bahasa Python dan library Faker</li>
+      <li>Saya menerapkan teknik Machine Learning yaitu Clustering untuk mengelompokkan dataset ke dalam kategori tertentu untuk dapat di analisis lebih lanjut</li>
+    </ul>
+    <h4>Preview Dataset</h4>
+    <img src="dataset.png" class="dataset" alt="preview dataset" width="100%" />
+    <p>Dataset berjumlah 200 baris dengan beberapa kolom seperti nama pelanggan, nomor hp, jenis kuota yang dibeli, dan lainnya.</p>
+    <p>Jika ingin melihat file dataset lebih lengkap bisa unduh di tautan berikut:</p>
+    <a href="data_pelanggan_indosat.csv" download>📥 Unduh Data Pelanggan Indosat (CSV)</a>
+    <h2>1. Menghitung Churn Rate (customer berhenti berlangganan)</h2>
+    <iframe src="churn_rate.html"></iframe>
+    <p><strong>Kesimpulan mini Project 1:</strong></p>
+    <p>Perhitungan <i>churn rate</i> dilakukan dengan mem-filter pelanggan yang tidak melakukan topup kuota selama 3 bulan atau lebih. Kemudian ditemukan hasil sebanyak 22.50% pelanggan (45 orang) dari total 200 pelanggan sudah berhenti berlangganan. Hasil perhitungan disajikan dalam bentuk diagram berikut:</p>
+    <img src="churn_diagram.png" class="diagram" alt="gambar diagram churn rate" width="500px"/>
+    <p>Jika ingin melihat proses pengolahan data lebih lengkap, silahkan unduh di tautan berikut:</p>
+    <a href="churn.pdf" download>📥 Unduh File Churn Rate (PDF)</a>
 
-    <p>Berikut adalah dokumen PDF mengenai dua project kecil yang saya buat sebagai latihan keterampilan di bidang data:</p>
-
-    <p><strong>Catatan:</strong> Jika link dibuka lewat HP, kemungkinan file PDF akan terunduh terlebih dahulu sebelum bisa dilihat. Namun jika dibuka lewat komputer/laptop, file PDF kemungkinan langsung bisa dipreview tanpa perlu di-download.</p>
-
-    <p><strong>1.</strong> Saya membuat data dummy berupa tabel yang merepresentasikan data pelanggan Indosat. Jika ingin melihat file lebih lanjut, bisa unduh di link berikut</p>
-    <a href="data_pelanggan_indosat.csv" download>Unduh Data Pelanggan Indosat (CSV)</a>
-
-    <p><strong>2.</strong> Dari data tersebut, saya menghitung <em>churn rate</em> (tingkat kehilangan pelanggan) dan menampilkannya dalam bentuk visualisasi pie chart, seperti berikut:</p>
-
-    <iframe src="churn_rate.pdf"></iframe>
-
-    <p><strong>3.</strong> Untuk level lebih lanjut, saya membangun model <em>clustering</em> (pengelompokan) menggunakan metode machine learning untuk membagi pelanggan ke dalam tiga kelompok unik berdasarkan karakteristiknya.</p>
-
-    <iframe src="Clustering.pdf"></iframe>
+    <h2>2. Kategorikan data dengan teknik Clustering</h2>
+    <iframe src="cluster.html"></iframe>
+    <p><strong>Kesimpulan mini Project 2:</strong></p>
+    <p>Dari proses clustering yang dilakukan, hasilnya pelanggan dibedakan ke dalam 3 kelompok (Cluster 0, Cluster 1, Cluster 2).</p>
+    <ol>
+      <li><strong>Cluster 0:</strong></li>
+      <ul>
+        <li>68 customer</li>
+        <li>rata-rata <code>Kuota_Bulan_GB</code> = 6GB</li>
+        <li>dominasi <code>Kota</code> = Yogyakarta</li>
+        <li>dominasi <code>Paket</code> = Unlimited 2GB</li>
+        <li><p>Pada rentang cluster ini jumlah pengguna terbanyak di dominasi oleh wilayah <strong>Yogyakarta</strong>, dengan pengguna sebanyak <strong>68</strong> dari total 200 orang. Untuk paket yang paling populer di cluster ini adalah <strong>Unlimited 2GB</strong> dengan penggunaan rata-rata menyentuh angka <strong>6GB</strong> per bulan.</p></li>
+      </ul>
+      <li><strong>Cluster 1:</strong></li>
+      <ul>
+        <li>72 customer</li>
+        <li>rata-rata <code>Kuota_Bulan_GB</code> = 12GB</li>
+        <li>dominasi <code>Kota</code> = Surabaya</li>
+        <li>dominasi <code>Paket</code> = Freedom Internet</li>
+        <li><p>Cluster ini memiliki total pengguna terbanyak yaitu <strong>72</strong> orang, dengan kebanyakan pengguna berasal dari Kota <strong>Surabaya</strong>. Paket <strong>Freedom Internet</strong> merupakan jenis paket yang paling banyak dibeli oleh customer dalam cluster ini dengan rata-rata penggunaan tiap bulan mencapai <strong>12GB</strong> per bulan.</p></li>
+      </ul>
+      <li><strong>Cluster 2:</strong></li>
+      <ul>
+        <li>60 customer</li>
+        <li>rata-rata <code>Kuota_Bulan_GB</code> = 19GB</li>
+        <li>dominasi <code>Kota</code> = Bandung, Semarang</li>
+        <li>dominasi <code>Paket</code> = Freedom Internet</li>
+        <li><p>Lagi-lagi paket <strong>Freedom Internet</strong> adalah pilihan populer bagi orang-orang yang berada pada cluster ini, dengan pengguna sebanyak <strong>60</strong> orang yang berasal dari wilayah <strong>Bandung</strong> dan <strong>Semarang</strong>. Rata-rata pengguna menghabiskan kuota sebanyak <strong>19GB</strong> tiap bulan.</p></li>
+      </ul>
+    </ol>
+    <p>Jika ingin melihat proses pengolahan data lebih lengkap, silahkan unduh di tautan berikut:</p>
+    <a href="cluster.pdf" download>📥 Unduh File Clustering (PDF)</a>
+    <br><br>
+    <hr>
+    <p>Melalui mini project ini, saya mencoba menerapkan beberapa teknik dasar terkait Web Programming, Python Programming, Machine Learning serta Data Analysis yang telah saya pelajari diluar materi akademik. Semoga dengan mini project ini bisa menjadi bahan pertimbangan keputusan dalam permohonan magang saya. Meskipun sedikit, namun saya berharap agar bisa ikut membantu serta berkontribusi terhadap pekerjaan serta tanggung jawab di perusahaan.</p>
     <p>Terima kasih.</p>
   </div>
+  <div class="cv">
+    <a href="cv.html">📋 Link CV</a>
+  </div>
+  <footer>
+    <p>&copy; 2025 Teguh Hadi | Made with ❤️ and 🔥.</p>
+  </footer>
 </body>
+
 </html>
