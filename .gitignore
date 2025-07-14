@@ -4,6 +4,8 @@
 .DS_Store
 Thumbs.db
 
+*.ipynb
+
 # VS Code config
 .vscode/
 
