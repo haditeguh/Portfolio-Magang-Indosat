@@ -1,6 +1,6 @@
 access link below so you can see this small porto via website 🥳
 
-haditeguh.github.io/mini_ML
+[mini_ML] (haditeguh.github.io/mini_ML/)
 
 berisi mengenai portfolio kecil yang saya buat dengan tujuan sebagai nilai tambah agar bisa diterima magang.
 
